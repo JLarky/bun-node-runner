@@ -22,3 +22,17 @@ No Bun, no problem
 from ts file /workspaces/bun-node-runner/examples/simple/node-ts.ts
 No Bun, no problem
 ```
+
+## What happened?
+
+To run the module using Node environment just do:
+
+```ts
+await runScript(() => import('./node-js.mjs'));
+```
+
+To get standard output from running the script just change it to:
+
+```ts
+const output = await runScript(() => import('./node-js.mjs')).text();
+```
